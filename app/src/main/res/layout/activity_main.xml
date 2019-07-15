@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".modules.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_grey_dark"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/search_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_search"
+                    android:layout_marginStart="@dimen/margin_activity_small"
+                    android:layout_marginTop="@dimen/margin_activity_small"
+                    android:layout_marginEnd="@dimen/margin_activity_small"
+                    android:background="@drawable/frame_rounded"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_activity"
+                    android:paddingLeft="@dimen/padding_activity"
+                    android:paddingEnd="@dimen/padding_activity"
+                    android:paddingRight="@dimen/padding_activity">
+
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:drawableStart="@drawable/ic_magnifying_glass"
+                        android:drawableLeft="@drawable/ic_magnifying_glass"
+                        android:drawablePadding="@dimen/padding_activity"
+                        android:gravity="start"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textIsSelectable="false" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_categories_radio"
+                    android:background="@color/blue_grey_dark"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_activity_small">
+
+                    <RadioButton
+                        android:id="@+id/radio_popular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/pref_sort_by_label_popular"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/RadioButtonStyle"
+                        android:layout_marginRight="@dimen/padding_activity_small"
+                        android:layout_marginEnd="@dimen/padding_activity_small"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_top_rated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/pref_sort_by_label_top_rated"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/RadioButtonStyle"
+                        android:layout_marginRight="@dimen/padding_activity_small"
+                        android:layout_marginEnd="@dimen/padding_activity_small"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_upcoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/pref_sort_by_label_upcoming"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/RadioButtonStyle"
+                        android:layout_marginRight="@dimen/padding_activity_small"
+                        android:layout_marginEnd="@dimen/padding_activity_small"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_favorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/pref_sort_by_label_favorites"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/RadioButtonStyle" />
+                </RadioGroup>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/blue_grey_dark" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            style="@style/EmptyTextStyle"
+            android:drawablePadding="@dimen/padding_activity"
+            android:textAlignment="center"
+            android:textColor="@color/color_offline" />
+
+    </FrameLayout>
+</layout>

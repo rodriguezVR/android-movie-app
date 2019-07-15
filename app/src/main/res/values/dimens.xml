@@ -1,0 +1,47 @@
+<resources>
+    <dimen name="padding_activity">16dp</dimen>
+    <dimen name="padding_activity_large">48dp</dimen>
+
+    <dimen name="padding_activity_small">8dp</dimen>
+    <dimen name="margin_activity_small">8dp</dimen>
+    <dimen name="padding_activity_option">4dp</dimen>
+
+    <dimen name="margin_activity">16dp</dimen>
+
+    <dimen name="margin_vote_average">84dp</dimen>
+    <dimen name="margin_vote_ten">4dp</dimen>
+    <dimen name="margin_vote_count">24dp</dimen>
+    <dimen name="margin_cast">40dp</dimen>
+    <dimen name="margin_director">@dimen/margin_cast</dimen>
+    <dimen name="padding_vote_average_label">4dp</dimen>
+    <dimen name="margin_detail">24dp</dimen>
+
+    <dimen name="size_person_image">18dp</dimen>
+    <dimen name="size_star_image">48dp</dimen>
+
+    <dimen name="width_trailer_image">300dp</dimen>
+    <dimen name="height_trailer_image">200dp</dimen>
+
+    <dimen name="margin_card_view">5dp</dimen>
+
+    <dimen name="padding_list_text">4dp</dimen>
+
+    <dimen name="size_detail_loading_indicator">26dp</dimen>
+    <dimen name="size_play_image">60dp</dimen>
+
+    <dimen name="width_cast_image">72dp</dimen>
+    <dimen name="height_cast_image">84dp</dimen>
+    <dimen name="margin_cast_name">24dp</dimen>
+    <dimen name="margin_cast_character">@dimen/margin_cast_name</dimen>
+    <dimen name="height_divider">0.1dp</dimen>
+
+    <dimen name="card_corner_radius">0dp</dimen>
+    <dimen name="card_elevation">0.7dp</dimen>
+    <dimen name="card_max_elevation">1dp</dimen>
+    <dimen name="card_content_padding_zero">0dp</dimen>
+
+
+    <dimen name="height_categories_radio">70dp</dimen>
+    <dimen name="height_search">51dp</dimen>
+
+</resources>
